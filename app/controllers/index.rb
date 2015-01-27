@@ -23,11 +23,10 @@ get '/login' do
 end
 
 post '/sessions' do
-  puts params
-  user = User.where(email: params[:user][:email])[0]
-  if user.password == params[:password]
+  user = User.find_by(email: params[:user][:email])
+  if user.password == params[:user][:password]
     session[:user_id] = user.id
-    "logged in"
+    erb :index
   else
     redirect '/login'
   end
