@@ -9,8 +9,14 @@ get '/users/new' do
 end
 
 post '/users' do
+  user = User.new(params[:user])
 
-  "Hello World"
+
+  if user.save
+    erb :login
+  else
+    erb :register
+  end
 end
 
 get '/login' do
