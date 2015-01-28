@@ -1,5 +1,6 @@
 get '/' do
 
+
   erb :index
 end
 
@@ -31,3 +32,10 @@ post '/sessions' do
     redirect '/login'
   end
 end
+
+get '/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end
+
+
