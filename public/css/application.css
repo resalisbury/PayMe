@@ -1,17 +1,23 @@
 
-
-
-html, body, #map-canvas {
+html, body {
   height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-#map-canvas {
-
+#map-container {
+  height: 90%;
+  background-color: red;
 }
 
-body {
+#map-row, #map-canvas {
+  height: 100%;
+  background-color: green;
+}
+
+#nav-bar {
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #33C3F0;
 }
+
+
