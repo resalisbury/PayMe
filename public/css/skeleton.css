@@ -354,7 +354,8 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-top: 1rem;
+  margin-bottom: 0rem; }
 
 
 /* Utilities

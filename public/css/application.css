@@ -4,13 +4,11 @@ html, body {
 }
 
 #map-container {
-  height: 90%;
-  background-color: red;
+  height: 80%;
 }
 
-#map-row, #map-canvas {
+#map-canvas {
   height: 100%;
-  background-color: green;
 }
 
 #nav-bar {
@@ -18,11 +16,22 @@ html, body {
   padding-left: 8px;
   padding-right: 8px;
   background-color: #33C3F0;
+  text-align: center;
 }
 
 .section {
-  padding: 8rem 0 7rem;
+  padding: 1rem 0 1rem;
   text-align: center;
+
 }
+#lat-long {
+  position: absolute;
+  z-index: 100;
+  margin-left: 125px;
+}
+#lat-long form input[type="submit"] {
+  background: white;
+}
+
 
 
