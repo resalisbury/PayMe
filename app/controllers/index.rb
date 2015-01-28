@@ -1,11 +1,8 @@
 get '/' do
-
-
   erb :index
 end
 
 get '/users/new' do
-
   erb :register
 end
 
@@ -19,7 +16,6 @@ post '/users' do
 end
 
 get '/login' do
-
   erb :login
 end
 

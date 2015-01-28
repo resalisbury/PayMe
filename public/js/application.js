@@ -24,7 +24,6 @@ function update() {
     center: { lat: latitude, lng: longitude},
     zoom: 8
   };
-  debugger;
   new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 };
