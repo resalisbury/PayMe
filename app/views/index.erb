@@ -1,3 +1,12 @@
+<% if login? %>
+  <form action='/go' method='post' id='go'>
+    <p class='form-headers'>Choose Coordinates:</p>
+    <input type='number' name='latitude' placeholder='latitude'>
+    <input type='number' name='longitude' placeholder='longitude'>
+    <input type='submit' name='Login' value='login'>
+  </form>
+<% end %>
+
 
 <div id="map-canvas"></div>
 
