@@ -20,4 +20,9 @@ html, body {
   background-color: #33C3F0;
 }
 
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+
 
