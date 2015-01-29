@@ -17,7 +17,6 @@ function initialize() {
 
 function update() {
   event.preventDefault();
-  console.log('what up!');
   var latitude = parseFloat($("#go").find("input[name='latitude']").val())
   var longitude = parseFloat($("#go").find("input[name='longitude']").val())
 
@@ -29,5 +28,9 @@ function update() {
 
 };
 
+// google.maps.MapTypeId.ROADMAP
+// MapTypeId.SATELLITE
+// MapTypeId.HYBRID
+// MapTypeId.TERRAIN
 
 

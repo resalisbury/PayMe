@@ -4,7 +4,7 @@ html, body {
 }
 
 #map-container {
-  height: 80%;
+  height: 92%;
 }
 
 #map-canvas {
@@ -33,5 +33,9 @@ html, body {
   background: white;
 }
 
+.container {
+  width: 100%;
+  padding: 0;
+}
 
 
