@@ -30,6 +30,7 @@ function initialize() {
 
 function update() {
   event.preventDefault();
+  debugger;
   var latitude = parseFloat($("#go").find("input[name='latitude']").val())
   var longitude = parseFloat($("#go").find("input[name='longitude']").val())
   var myLatlng = new google.maps.LatLng(latitude,longitude);
