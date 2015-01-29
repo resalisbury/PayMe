@@ -20,8 +20,6 @@ gem 'httparty'
 
 gem 'bcrypt'
 
-gem 'debugger'
-
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
