@@ -30,17 +30,11 @@ function initialize() {
 
 function update() {
   event.preventDefault();
-  debugger;
-  var latitude = parseFloat($("#go").find("input[name='latitude']").val())
-  var longitude = parseFloat($("#go").find("input[name='longitude']").val())
-  var myLatlng = new google.maps.LatLng(latitude,longitude);
+  var latlng = $("#go").find("input[name='latlng']").val().split(',')
+  var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
   mapOptions.center = myLatlng,
   new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 };
 
-// google.maps.MapTypeId.ROADMAP
-// MapTypeId.SATELLITE
-// MapTypeId.HYBRID
-// MapTypeId.TERRAIN
 
 

@@ -5,9 +5,8 @@
   <div id="lat-long">
     <% if login? %>
       <form action='/go' method='post' id='go'>
-        <input type='number' step="any" name='latitude' placeholder='latitude'>
-        <input type='number' step="any" name='longitude' placeholder='longitude'>
-        <input type='submit' name='Login' value='update'>
+        <input type='text' step="any" name='latlng' placeholder='search'>
+        <input type='submit' name='Login' value='Search'>
       </form>
     <% end %>
 </div>
