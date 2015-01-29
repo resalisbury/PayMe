@@ -12,7 +12,8 @@ function initialize() {
     // mapTypeId: google.maps.MapTypeId.TERRAIN,
     mapTypeControl: true,
     mapTypeControlOptions: {
-      style: google.maps.MapTypeControlStyle.DEFAULT,
+      position: google.maps.ControlPosition.TOP_LEFT,
+      style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
       mapTypeIds: [
         google.maps.MapTypeId.ROADMAP,
         google.maps.MapTypeId.TERRAIN,
