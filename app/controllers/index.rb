@@ -1,7 +1,5 @@
 require_relative "../models/api"
 
-require 'debugger'
-
 get '/' do
   erb :index
 end
