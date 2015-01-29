@@ -1,3 +1,5 @@
+require_relative "../models/api"
+
 get '/' do
   erb :index
 end
@@ -33,5 +35,14 @@ get '/logout' do
   session[:user_id] = nil
   redirect '/'
 end
+
+post '/go' do
+  "hello world"
+  p params[:latlng]
+  api =   GoogleMapsAPI.new(params[:latlng])
+  p JSON.parse(api.search)
+  erb :index
+end
+
 
 

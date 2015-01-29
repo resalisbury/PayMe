@@ -36,7 +36,7 @@ function update() {
   if (/ *-?[0-9]*.[0-9]*, *-?[0-9]*.[0-9]*/.test(input)) {
     console.log('success')
     event.preventDefault();
-    var latlng = input.split(',')
+    var latlng = $("#go").find("input[name='latlng']").val().split(',')
     var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
     mapOptions.center = myLatlng,
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
