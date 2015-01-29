@@ -2,17 +2,39 @@
 
 
 <div class="container" id="map-container">
-  <div id="lat-long">
-    <% if login? %>
-      <form action='/go' method='post' id='go'>
-        <input type='text' step="any" name='latlng' placeholder='search'>
-        <input type='submit' name='Login' value='Search'>
-      </form>
-    <% end %>
-</div>
-
-    <div id="map-canvas">
+  <% if login? %>
+    <div id="lat-long" class="map-overlay">
+        <form action='/go' method='post' id='go'>
+          <input type='text' step="any" name='latlng' placeholder='search'>
+          <input type='submit' name='Login' value='Search'>
+        </form>
     </div>
+
+    <div class="map-overlay" id="search-results">
+      <table class="u-full-width">
+        <tbody>
+          <tr>
+            <td>Dave Gamache</td>
+            <td>26</td>
+            <td>Male</td>
+            <td>San Francisco</td>
+          </tr>
+          <tr>
+            <td>Dwayne Johnson</td>
+            <td>42</td>
+            <td>Male</td>
+            <td>Hayward</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  <% end %>
+
+
+
+  <div id="map-canvas"></div>
 </div>
 
 

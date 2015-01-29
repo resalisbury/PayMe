@@ -24,11 +24,20 @@ html, body {
   text-align: center;
 
 }
-#lat-long {
+
+.map-overlay {
   position: absolute;
   z-index: 100;
-  margin-left: 125px;
 }
+
+#lat-long, #search-results  {
+  margin-left: 1%;
+}
+
+#search-results {
+  margin-top: 75px;
+}
+
 #lat-long form input[type="submit"] {
   background: white;
 }
@@ -38,4 +47,9 @@ html, body {
   padding: 0;
 }
 
+table {
+  background-color: white;
+  border-radius: 25px;
+  border: 1px gray;
+}
 

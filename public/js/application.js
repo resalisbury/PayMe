@@ -12,7 +12,7 @@ var mapOptions = {
   // mapTypeId: google.maps.MapTypeId.TERRAIN,
   mapTypeControl: true,
   mapTypeControlOptions: {
-    position: google.maps.ControlPosition.TOP_LEFT,
+    position: google.maps.ControlPosition.BOTTOM_LEFT,
     style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
     mapTypeIds: [
       google.maps.MapTypeId.ROADMAP,
