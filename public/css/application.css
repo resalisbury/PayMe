@@ -35,7 +35,7 @@ html, body {
 }
 
 #search-results {
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 #lat-long form input[type="submit"] {
@@ -49,7 +49,10 @@ html, body {
 
 table {
   background-color: white;
-  border-radius: 25px;
-  border: 1px gray;
+  border-radius: 5px;
+}
+
+img {
+  height: 15 px;
 }
 

@@ -10,24 +10,21 @@
         </form>
     </div>
 
-    <div class="map-overlay" id="search-results">
-      <table class="u-full-width">
-        <tbody>
-          <tr>
-            <td>Dave Gamache</td>
-            <td>26</td>
-            <td>Male</td>
-            <td>San Francisco</td>
-          </tr>
-          <tr>
-            <td>Dwayne Johnson</td>
-            <td>42</td>
-            <td>Male</td>
-            <td>Hayward</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <% if @results %>
+      <div class="map-overlay" id="search-results">
+        <table class="u-full-width">
+          <tbody>
+            <% @results.each_with_index do |result, i| %>
+              <% break if i > 8 %>
+              <tr>
+                <td><b><%=result["name"]%></b><br>
+                <%=result["formatted_address"].slice(0,result["formatted_address"].index(','))%></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
 
 
   <% end %>
