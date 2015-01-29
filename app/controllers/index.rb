@@ -1,3 +1,7 @@
+require_relative '../models/api'
+
+require 'json'
+
 get '/' do
   erb :index
 end
@@ -36,6 +40,10 @@ end
 
 post '/find' do
   "hello world"
+  p params[:search_string]
+  api =   GoogleMapsAPI.new(params[:search_string])
+  p JSON.parse(api.search(params[:search_string]))
+  erb :index
 end
 
 
