@@ -32,15 +32,19 @@ function initialize() {
 }
 
 function update() {
-  event.preventDefault();
-  var latlng = $("#go").find("input[name='latlng']").val().split(',')
-  var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
-  mapOptions.center = myLatlng,
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  marker = new google.maps.Marker({
-    position: map.center,
-    map: map,
-  });
+  var input = $("#go").find("input[name='latlng']").val()
+  if (/ *-?[0-9]*.[0-9]*, *-?[0-9]*.[0-9]*/.test(input)) {
+    console.log('success')
+    event.preventDefault();
+    var latlng = input.split(',')
+    var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
+    mapOptions.center = myLatlng,
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    marker = new google.maps.Marker({
+      position: map.center,
+      map: map,
+    });
+  };
 };
 
 
