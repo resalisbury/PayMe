@@ -1,6 +1,6 @@
 $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
-  $('#go').on('submit', update)
+  $('#go').on('submit', update);
 });
 var map;
 
@@ -31,15 +31,15 @@ function initialize() {
 
 function update() {
   event.preventDefault();
-  var latitude = parseFloat($("#go").find("input[name='latitude']").val())
-  var longitude = parseFloat($("#go").find("input[name='longitude']").val())
+  debugger
+  var latitude = parseFloat($("#go").find("input[name='latitude']").val());
+  var longitude = parseFloat($("#go").find("input[name='longitude']").val());
   var myLatlng = new google.maps.LatLng(latitude,longitude);
-  mapOptions.center = myLatlng,
-  map = google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    var marker = new google.maps.Marker({
+  mapOptions.center = myLatlng;
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var marker = new google.maps.Marker({
     position: map.center,
     map: map,
-    title:"Dev Bootcamp"
   });
 };
 
