@@ -1,6 +1,7 @@
 $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
   $('#go').on('submit', update)
+  $('.result').on('click', goTo)
 });
 
 var map;
@@ -34,7 +35,6 @@ function initialize() {
 function update() {
   var input = $("#go").find("input[name='latlng']").val()
   if (/ *-?[0-9]*.[0-9]*, *-?[0-9]*.[0-9]*/.test(input)) {
-    console.log('success')
     event.preventDefault();
     var latlng = $("#go").find("input[name='latlng']").val().split(',')
     var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
@@ -46,6 +46,19 @@ function update() {
     });
   };
 };
+
+function goTo() {
+  console.log($(this).find($('.latlng')).html())
+  event.preventDefault();
+  var latlng = $(this).find($('.latlng')).html().split(',')
+  var myLatlng = new google.maps.LatLng(parseFloat(latlng[0]),parseFloat(latlng[1]));
+  mapOptions.center = myLatlng,
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  marker = new google.maps.Marker({
+    position: map.center,
+    map: map,
+  });
+}
 
 
 

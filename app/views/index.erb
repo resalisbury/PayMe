@@ -15,10 +15,13 @@
         <table class="u-full-width">
           <tbody>
             <% @results.each_with_index do |result, i| %>
-              <% break if i > 8 %>
-              <tr>
-                <td><b><%=result["name"]%></b><br>
-                <%=result["formatted_address"].slice(0,result["formatted_address"].index(','))%></td>
+              <% break if i > 6%>
+              <tr class="result">
+                <td>
+                  <b><%=result["name"]%></b><br>
+                  <%=result["formatted_address"].slice(0,result["formatted_address"].index(','))%><br>
+                  <span class="latlng"><%=result["geometry"]["location"]["lat"]%>, <%=result["geometry"]["location"]["lng"]%></span>
+                </td>
               </tr>
             <% end %>
           </tbody>
