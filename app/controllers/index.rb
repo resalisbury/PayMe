@@ -34,4 +34,8 @@ get '/logout' do
   redirect '/'
 end
 
+post '/find' do
+  "hello world"
+end
+
 
