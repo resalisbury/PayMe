@@ -2,6 +2,7 @@ $(document).ready(function() {
   google.maps.event.addDomListener(window, 'load', initialize);
   $('#go').on('submit', update)
 });
+var map;
 
 var mapOptions = {
   center: { lat: 37.785077, lng: -122.397171},
@@ -20,7 +21,7 @@ var mapOptions = {
 };
 
 function initialize() {
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   var marker = new google.maps.Marker({
     position: map.center,
     map: map,
@@ -34,7 +35,12 @@ function update() {
   var longitude = parseFloat($("#go").find("input[name='longitude']").val())
   var myLatlng = new google.maps.LatLng(latitude,longitude);
   mapOptions.center = myLatlng,
-  new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  map = google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var marker = new google.maps.Marker({
+    position: map.center,
+    map: map,
+    title:"Dev Bootcamp"
+  });
 };
 
 // google.maps.MapTypeId.ROADMAP
